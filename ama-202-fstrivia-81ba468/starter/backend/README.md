@@ -76,7 +76,8 @@ GET '/questions'
 - Request Arguments: None
 
 curl http://127.0.0.1:5000/questions
-    ```{
+```
+{
       "categories": {
           "1": "Science",
           "2": "Art",
@@ -92,8 +93,8 @@ curl http://127.0.0.1:5000/questions
               "difficulty": 3,
               "id": 164,
               "question": "Which four states make up the 4 Corners region of the US?"
-          }]}```
-     
+          }]}
+ ```    
      
 DELETE /questions/int:id
 Request Arguments: id ,an integer
