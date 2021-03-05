@@ -56,7 +56,7 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 REVIEW_COMMENT
 
 
-Endpoints
+##Endpoints
 
 GET '/categories'
 - Fetches a dictionary of categories in which the keys are the ids and the value is the corresponding string of the category
@@ -76,7 +76,7 @@ GET '/questions'
 - Request Arguments: None
 
 curl http://127.0.0.1:5000/questions
-  {
+    ```{
       "categories": {
           "1": "Science",
           "2": "Art",
@@ -92,20 +92,21 @@ curl http://127.0.0.1:5000/questions
               "difficulty": 3,
               "id": 164,
               "question": "Which four states make up the 4 Corners region of the US?"
-          }
-          
+          }]}```
+     
+     
 DELETE /questions/int:id
 Request Arguments: id ,an integer
 Deletes a question by id using url parameters.
 Returns id of deleted question upon success.
 
 Sample: curl http://127.0.0.1:5000/questions/6 -X DELETE
-
+```
   {
       "deleted": 6,
       "success": true
   }
-  
+  ```
   
 POST /questions
 creates a new question
@@ -113,7 +114,7 @@ Request Arguments: Creates a new question using JSON request parameters.
 Returns JSON object with newly created question, as well as paginated questions.
 
 Sample: curl http://127.0.0.1:5000/questions -X POST -H "Content-Type: application/json" -d '{ "question": "Which US state contains an area known as the Upper Penninsula?", "answer": "Michigan", "difficulty": 3, "category": "3" }'
-
+```
   {
       "created": 173,
       "question_created": "Which US state contains an area known as the Upper Penninsula?",
@@ -125,14 +126,14 @@ Sample: curl http://127.0.0.1:5000/questions -X POST -H "Content-Type: applicati
               "id": 2,
               "question": "What movie earned Tom Hanks his third straight Oscar nomination, in 1996?"
           }
-    
+```    
 POST /questions/search    
     Searches for questions 
     Request Arguments: search term in JSON request parameters.
     Returns JSON object with paginated matching questions.
 
 Sample: curl http://127.0.0.1:5000/questions -X POST -H "Content-Type: application/json" -d '{"searchTerm": "which"}'
-
+```
   {
       "questions": [
           {
@@ -146,7 +147,7 @@ Sample: curl http://127.0.0.1:5000/questions -X POST -H "Content-Type: applicati
       "success": true,
       "total_questions": 18
   }
-
+```
 
 POST /quizzes
  -Allows users to play the quiz game.
@@ -154,7 +155,7 @@ POST /quizzes
  -Returns JSON object with random question not among previous questions.
 
 Sample: curl http://127.0.0.1:5000/quizzes -X POST -H "Content-Type: application/json" -d '{"previous_questions": [20, 21], "quiz_category": {"type": "Science", "id": "1"}}'
-
+```
   {
       "question": {
           "answer": "Blood",
@@ -165,7 +166,7 @@ Sample: curl http://127.0.0.1:5000/quizzes -X POST -H "Content-Type: application
       },
       "success": true
   }
-
+```
 
 ## Testing
 To run the tests, run
