@@ -114,9 +114,9 @@ curl http://127.0.0.1:5000/questions
  ```    
      
 DELETE /questions/int:id
-Request Arguments: id ,an integer
-Deletes a question by id using url parameters.
-Returns id of deleted question upon success.
+- Request Arguments: id ,an integer
+- Deletes a question by id using url parameters.
+- Returns id of deleted question upon success.
 
 Sample: curl http://127.0.0.1:5000/questions/6 -X DELETE
 ```
@@ -127,9 +127,9 @@ Sample: curl http://127.0.0.1:5000/questions/6 -X DELETE
   ```
   
 POST /questions
-creates a new question
-Request Arguments: Creates a new question using JSON request parameters.
-Returns JSON object with newly created question, as well as paginated questions.
+- creates a new question
+- Request Arguments: Creates a new question using JSON request parameters.
+- Returns JSON object with newly created question, as well as paginated questions.
 
 Sample: curl http://127.0.0.1:5000/questions -X POST -H "Content-Type: application/json" -d '{ "question": "Which US state contains an area known as the Upper Penninsula?", "answer": "Michigan", "difficulty": 3, "category": "3" }'
 ```
@@ -168,9 +168,9 @@ Sample: curl http://127.0.0.1:5000/questions -X POST -H "Content-Type: applicati
 ```
 
 POST /quizzes
- -Allows users to play the quiz game.
- -Uses JSON request parameters of category and previous questions.
- -Returns JSON object with random question not among previous questions.
+- Allows users to play the quiz game.
+- Uses JSON request parameters of category and previous questions.
+- Returns JSON object with random question not among previous questions.
 
 Sample: curl http://127.0.0.1:5000/quizzes -X POST -H "Content-Type: application/json" -d '{"previous_questions": [20, 21], "quiz_category": {"type": "Science", "id": "1"}}'
 ```
