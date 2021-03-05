@@ -146,9 +146,9 @@ Sample: curl http://127.0.0.1:5000/questions -X POST -H "Content-Type: applicati
           }
 ```    
 POST /questions/search    
-    Searches for questions 
-    Request Arguments: search term in JSON request parameters.
-    Returns JSON object with paginated matching questions.
+- Searches for questions 
+- Request Arguments: search term in JSON request parameters.
+- Returns JSON object with paginated matching questions.
 
 Sample: curl http://127.0.0.1:5000/questions -X POST -H "Content-Type: application/json" -d '{"searchTerm": "which"}'
 ```
