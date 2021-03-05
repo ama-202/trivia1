@@ -57,8 +57,6 @@ REVIEW_COMMENT
 
 
 Endpoints
-GET '/categories'
-
 
 GET '/categories'
 - Fetches a dictionary of categories in which the keys are the ids and the value is the corresponding string of the category
