@@ -29,7 +29,24 @@ This will install all of the required packages we selected within the `requireme
 - [SQLAlchemy](https://www.sqlalchemy.org/) is the Python SQL toolkit and ORM we'll use handle the lightweight sqlite database. You'll primarily work in app.py and can reference models.py. 
 
 - [Flask-CORS](https://flask-cors.readthedocs.io/en/latest/#) is the extension we'll use to handle cross origin requests from our frontend server. 
+#### Installing Node and NPM
 
+This project depends on Nodejs and Node Package Manager (NPM). Before continuing, you must download and install Node (the download includes NPM) from [https://nodejs.com/en/download](https://nodejs.org/en/download/).
+
+#### Installing project dependencies
+
+This project uses NPM to manage software dependencies. NPM Relies on the package.json file located in the `frontend` directory of this repository. After cloning, open your terminal and run:
+
+```bash
+npm install
+```
+
+>_tip_: **npm i** is shorthand for **npm install**
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits.<br>
+
+```bash
+npm start
+```
 ## Database Setup
 With Postgres running, restore a database using the trivia.psql file provided. From the backend folder in terminal run:
 ```bash
